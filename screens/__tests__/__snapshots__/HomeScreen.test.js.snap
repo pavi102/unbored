@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home screen should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#34393b",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#34393b",
+        "margin": "15%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#a3a6ad",
+          "fontFamily": "monospace",
+          "fontSize": 30,
+          "paddingHorizontal": "10%",
+        }
+      }
+    >
+      Unbored
+    </Text>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderBottomColor": "#a3a6ad",
+          "borderBottomWidth": 2,
+          "marginBottom": "20%",
+          "marginHorizontal": "12%",
+          "marginTop": "10%",
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#a3a6ad",
+            "fontFamily": "monospace",
+            "fontSize": 30,
+            "paddingHorizontal": "10%",
+          }
+        }
+      >
+        What to do
+      </Text>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#a3a6ad",
+            "fontFamily": "monospace",
+            "fontSize": 30,
+            "paddingHorizontal": "10%",
+          }
+        }
+      >
+        right now?
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderBottomColor": "#a3a6ad",
+          "borderBottomWidth": 2,
+          "marginBottom": "20%",
+          "marginHorizontal": "12%",
+          "marginTop": "10%",
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#a3a6ad",
+            "fontFamily": "monospace",
+            "fontSize": 30,
+            "paddingHorizontal": "10%",
+          }
+        }
+      >
+        Something
+      </Text>
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#a3a6ad",
+            "fontFamily": "monospace",
+            "fontSize": 30,
+            "paddingHorizontal": "10%",
+          }
+        }
+      >
+        more
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "borderBottomColor": "#a3a6ad",
+          "borderBottomWidth": 2,
+          "marginBottom": "20%",
+          "marginHorizontal": "12%",
+          "marginTop": "10%",
+        }
+      }
+    />
+  </View>
+</View>
+`;

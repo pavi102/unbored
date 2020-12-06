@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Activity Screen should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#34393b",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#34393b",
+        "margin": "10%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "#a3a6ad",
+          "fontFamily": "monospace",
+          "fontSize": 30,
+        }
+      }
+    >
+      Do 20 pushups
+    </Text>
+  </View>
+</View>
+`;

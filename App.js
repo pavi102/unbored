@@ -1,78 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useEffect, useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import * as Location from 'expo-location'
-import ReccomendationList from './components/ReccomendationList'
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 
-const MAPS_API_KEY = ''
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/HomeScreen';
+import ReccomendationScreen from './screens/ReccomendationScreen';
+import ReccomendationDetailsScreen from './screens/ReccomendationDetailsScreen';
+import TellMeMoreScreen from './screens/TellMeMoreScreen'
+import ActivityScreen from './screens/ActivityScreen'
 
-export default function App() {
 
-  const [errorMessage, setErrorMessage] = useState(null)
-  const [nearbyPlaces, setNearbyPlaces] = useState(null)
-  
-  useEffect(() => {
-    load()
-  }, [])
-  async function load() {
-    try {
-      let { status } = await Location.requestPermissionsAsync()
+const Stack = createStackNavigator();
+const App = () => {
+	return (
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen name="Home" component={HomeScreen} />
+				<Stack.Screen name="Activity" component={ActivityScreen} />
+				<Stack.Screen name="TellMeMore" component={TellMeMoreScreen} />
+				<Stack.Screen name="Reccomendation" component={ReccomendationScreen} />
+				<Stack.Screen name="ReccomendationDetails" component={ReccomendationDetailsScreen} />
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
+};
 
-      if(status != 'granted') {
-        setErrorMessage('Acccess to location is needed to use this feature')
-        return
-      }
-      const location = await Location.getCurrentPositionAsync()
-
-      const {latitude, longitude} = location.coords
-
-      const placesUrl = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=50&key=${MAPS_API_KEY}`
-      
-      const response = await fetch(placesUrl)
-
-      const result = await response.json()
-
-      if(response.status == "OK") {
-        setNearbyPlaces(result)
-        console.log(result)
-      }
-      else {
-        setErrorMessage("Unable to find anything nearby")
-      }
-      
-    }  catch (error) { 
-      
-    }
-  }
-  if(nearbyPlaces != null){
-    return (
-      <View style={styles.container}>
-        <StatusBar style="auto" />
-        <View style={styles.main}>
-          <ReccomendationList nearbyPlaces={nearbyPlaces}></ReccomendationList>
-        </View>
-      </View>
-    );
-  }
-  else {
-    return (
-      <View style={styles.container}>
-        <Text>{errorMessage}</Text>
-        <StatusBar style="auto" />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  main: {
-    justifyContent: 'center',
-    flex: 1
-  }
-});
+export default App;
